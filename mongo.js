@@ -45,9 +45,8 @@ const createProduct = async (req, res, next) => {
     return res.send({ message: "Could not store the data." });
   }
 
-  setTimeout(() => {
-    client.close();
-  }, 1500);
+  client.close();
+
   res.json(newProduct);
 };
 
